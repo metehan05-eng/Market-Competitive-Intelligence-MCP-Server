@@ -1,0 +1,48 @@
+{
+  "name": "omni-market-intelligence-mcp",
+  "version": "1.0.0",
+  "description": "Omni-Market & Competitive Intelligence MCP Server - HR, content, trends, real estate, SaaS pricing and e-commerce intelligence over stdio",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "omni-market-intelligence-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "setup:browsers": "playwright install chromium",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "competitive-intelligence",
+    "market-research",
+    "playwright",
+    "scraper"
+  ],
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "cheerio": "^1.2.0",
+    "domhandler": "^5.0.3",
+    "playwright": "^1.63.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/sqlite3": "^3.1.11",
+    "typescript": "^5.7.0"
+  }
+}
